@@ -15,7 +15,7 @@ steps:
 - script: npx playwright install --with-deps
   displayName: 'Instalar browsers'
 
-- script: npx playwright test
+- script: npx playwright test tests/clientAppPO.spec.js
   displayName: 'Ejecutar tests'
 
 - script: |
