@@ -1,0 +1,24 @@
+trigger:
+- main  # ejecuta cada push a main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+
+- script: npm ci
+  displayName: 'Instalar dependencias'
+
+- script: npx playwright install --with-deps
+  displayName: 'Instalar browsers'
+
+- script: npx playwright test
+  displayName: 'Ejecutar tests'
+
+- script: |
+    az login --service-principal -u $(AZURE_APP_ID) -p $(AZURE_PASSWORD) --tenant $(AZURE_TENANT)
+    az storage blob upload-batch -d playwright-results -s test-results --account-name $(AZURE_STORAGE_ACCOUNT)
+  displayName: 'Subir resultados a Azure Storage'

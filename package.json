@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "PO": "npx playwright test --grep @PO",
+    "CucumberTest": "npx cucumber-js --tags '@Regression' --exit --format html:cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.7.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^22.13.0",
+    "allure-playwright": "^3.6.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.13.0",
+    "@azure/playwright": "^1.1.2"
+  }
+}
