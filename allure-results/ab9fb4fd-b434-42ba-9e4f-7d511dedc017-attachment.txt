@@ -1,2 +1,0 @@
-[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro' ]
-Order ID:  | 69ab103a415d779f9b5e28a8 | 
