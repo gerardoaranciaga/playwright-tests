@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 
 
-test('challenge countries test', async ({ request }) => {
+test('[@challenge] challenge countries test', async ({ request }) => {
     const response = await request.get('https://restcountries.com/v3.1/name/argentina');
 
     const data = await response.json();

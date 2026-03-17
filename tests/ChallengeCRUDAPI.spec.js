@@ -3,7 +3,7 @@ import {test,expect} from '@playwright/test';
 
 const baseURL = 'https://jsonplaceholder.typicode.com';
 
-test('api crud tests', async ({request}) =>{
+test('[@challenge] api crud tests', async ({request}) =>{
 
     // Paso 1 – Obtener usuarios (GET)
 

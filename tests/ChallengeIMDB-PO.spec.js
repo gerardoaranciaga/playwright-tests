@@ -7,7 +7,7 @@ test.beforeEach(async ({page}) => {
 });
 
 
-test('challenge imdb',async ({page}) => {
+test('[@challenge] challenge imdb',async ({page}) => {
 
     const pomImDB = new POMImDB(page);
     const movieName = "The Matrix";

@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test';
 
 
-test('challenge countries test', async ({ request }) => {
+test('[@challenge] challenge countries test', async ({ request }) => {
     const response = await request.get('https://rickandmortyapi.com/api/character/?name=morty');
     const data = await response.json();
     const results = data.results;

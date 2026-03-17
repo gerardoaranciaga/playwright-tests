@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 
 
-test('backend test lagunitas cerveceria', async ({request}) => {
+test('[@challenge] backend test lagunitas cerveceria', async ({request}) => {
     
   
     // 1 - hacer request -> guardar la respuesta -> convertir a JSON -> ahora tenés una lista

@@ -8,7 +8,7 @@ test.beforeEach(async ({page}) => {
 });
 
 
-test('tests from duck page' , async ({page}) => {
+test('[@challenge] tests from duck page' , async ({page}) => {
     
     const pomDuck = new POMDuckGo(page);
     const word = 'automation testing';

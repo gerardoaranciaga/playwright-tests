@@ -7,25 +7,28 @@ import { on } from 'events';
  */
 const config = ({
   testDir: './tests',
-  timeout: 30*1000,
+  retries: 2,
+  workers: 4,
+  timeout: 30000,
   expect : {
     timeout: 5000,
   },
 
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['list']
+  ],
 
   use: {
-
-
     browserName: 'chromium', 
-    headless: false,
-    screenshot: 'on',
-    trace:'on',
-    //video: 'retain-on-failure'
-
+    headless: true,
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+    trace: 'on-first-retry',
   },
 
-  
+   
+
 });
 
 module.exports = config

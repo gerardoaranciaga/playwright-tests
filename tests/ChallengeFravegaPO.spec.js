@@ -11,7 +11,7 @@ test.afterEach(async ({ page }) => {
   console.log("Test terminado");
 });
 
-test('buscar y filtrar heladeras', async ({ page }) => {
+test('[@challenge] buscar y filtrar heladeras', async ({ page }) => {
 
   const pomFravega = new POMFravega(page);
 
