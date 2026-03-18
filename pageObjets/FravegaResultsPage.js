@@ -2,24 +2,24 @@ class FravegaResultsPage{
 
     constructor(page){
         this.page = page;
-        this.heladerasFilter = page.getByRole('link', { name: 'Heladeras (425)' });
-        this.brandFilters = page.locator('[name="brandAggregation"]');
-        this.webElements = page.locator('[data-test-id="result-item"]');
         //this.breadcrumb = page.locator('[name="breadcrumb"]');
     }
-
+    
     async filterHeladeras(){
-        await this.heladerasFilter.click();
+        const heladerasFilter = this.page.getByRole('link', { name: 'Heladeras' });
+        await heladerasFilter.click();
     }
-
+    
     async selectFirstBrand(){
-        const brand = await this.brandFilters.first().innerText();
-        await this.brandFilters.first().click();
+        const brandFilters = this.page.locator('[name="brandAggregation"]');
+        const brand = await brandFilters.first().innerText();
+        await brandFilters.first().click();
         return brand;
     }
-
+    
     async getWebElements(){
-        return this.webElements;
+        const webElements = this.page.locator('[data-test-id="result-item"]');
+        return webElements;
     }
 
 }
