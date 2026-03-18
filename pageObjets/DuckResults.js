@@ -3,19 +3,19 @@ class DuckResults{
     constructor(page){
 
         this.page = page;
-        this.moreResults = page.locator('#more-results');
-        this.wiki = page.locator('[href="https://en.wikipedia.org/wiki/Test_automation"]');
-        this.title = page.locator('#firstHeading');
-
+        
     }
-
+    
     async searchWikipedia(){
-        await this.moreResults.click();
-        await this.wiki.first().click();
+        const moreResults = this.page.locator('#more-results');
+        const wiki = this.page.locator('[href="https://en.wikipedia.org/wiki/Test_automation"]');
+        await moreResults.click();
+        await wiki.first().click();
     }
-
+    
     async getTitle(){
-        const titlePage = await this.title.textContent();
+        const title = this.page.locator('#firstHeading');
+        const titlePage = await title.textContent();
         return titlePage;
     }
 
