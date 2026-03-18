@@ -3,6 +3,7 @@ import {POMImDB} from '../pageObjets/POMImDB';
 
 test.beforeEach(async ({page}) => {
     await page.goto('https://www.imdb.com/');
+    await page.waitForLoadState('domcontentloaded');
 
 });
 
