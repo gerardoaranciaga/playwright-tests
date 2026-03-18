@@ -16,7 +16,7 @@ const config = ({
 
   reporter: [
     ['html'],
-    ['list']
+    ['github']
   ],
 
   use: {
