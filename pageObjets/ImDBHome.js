@@ -1,3 +1,5 @@
+import { expect } from '@playwright/test';
+
 class ImDBHome{
 
      constructor(page){
